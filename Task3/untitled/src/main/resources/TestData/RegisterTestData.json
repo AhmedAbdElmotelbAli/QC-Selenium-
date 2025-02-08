@@ -1,0 +1,109 @@
+{
+
+  "validRegisterData": [
+    {
+      "gender": "Male",
+      "firstName": "Ahmed",
+      "lastName": "Abdelmotelb",
+      "email": "sherefahmed659@gmail.com",
+      "password": "password123",
+      "confirmPassword": "password123"
+    },{
+      "gender": "Female",
+      "firstName": "Mona",
+      "lastName": "Ahmed",
+      "email": "Mona.Ahmed@example.com",
+      "password": "securePassword456",
+      "confirmPassword": "securePassword456"
+    },{
+      "gender": "",
+      "firstName": "Alex",
+      "lastName": "Taylor",
+      "email": "alex.taylor@example.com",
+      "password": "myPassword789",
+      "confirmPassword": "myPassword789"
+    }
+],"EmptyField": [
+  {
+    "gender": "Male",
+    "firstName": "",
+    "lastName": "Abdelmotelb",
+    "email": "sherefahmed659@gmail.com",
+    "password": "password123",
+    "confirmPassword": "password123",
+    "ExpectedErrorMessage": "First name is required."
+  },{
+    "gender": "",
+    "firstName": "Alex",
+    "lastName": "",
+    "email": "alex.taylor@example.com",
+    "password": "myPassword789",
+    "confirmPassword": "myPassword789",
+    "ExpectedErrorMessage": "Last name is required."
+
+  },{
+    "gender": "Male",
+    "firstName": "Ahmed",
+    "lastName": "Abdelmotelb",
+    "email": "",
+    "password": "myPassword789",
+    "confirmPassword": "myPassword789",
+    "ExpectedErrorMessage": "Email is required."
+
+  },{
+    "gender": "Male",
+    "firstName": "Ahmed",
+    "lastName": "Abdelmotelb",
+    "email": "sherefahmed659@gmail.com",
+    "password": "",
+    "confirmPassword": "myPassword789",
+    "ExpectedErrorMessage": "Password is required."
+
+  },
+  {
+    "gender": "Male",
+    "firstName": "Ahmed",
+    "lastName": "Abdelmotelb",
+    "email": "sherefahmed659@gmail.com",
+    "password": "myPassword789",
+    "confirmPassword": "",
+    "ExpectedErrorMessage": "Password is required."
+  }
+],"WrongEmail": [
+    {
+      "gender": "Male",
+      "firstName": "Ahmed",
+      "lastName": "Abdelmotelb",
+      "email": "sherefahmed659gmail.com",
+      "password": "password123",
+      "confirmPassword": "password123",
+      "ExpectedErrorMessage": "Wrong email"
+
+    },{
+      "gender": "Female",
+      "firstName": "Mona",
+      "lastName": "Ahmed",
+      "email": "MonaAhmed@example",
+      "password": "securePassword456",
+      "confirmPassword": "securePassword456",
+      "ExpectedErrorMessage": "Wrong email"
+
+  }
+    ], "wrongPassword": [
+  {
+    "gender": "Male",
+    "firstName": "Ahmed",
+    "lastName": "Abdelmotelb",
+    "email": "sherefahmed659@gmail.com",
+    "password": "pass",
+    "confirmPassword": "password123"
+  },{
+    "gender": "Female",
+    "firstName": "Mona",
+    "lastName": "Ahmed",
+    "email": "Mona.Ahmed@example.com",
+    "password": "securePassword456",
+    "confirmPassword": "securePasswor6"
+  }
+  ]
+}
