@@ -68,6 +68,15 @@
     "password": "myPassword789",
     "confirmPassword": "",
     "ExpectedErrorMessage": "Password is required."
+  },{
+    "gender": "Female",
+    "firstName": "Mona",
+    "lastName": "Ahmed",
+    "email": "Mona.Ahmed@example.com",
+    "password": "      ",
+    "confirmPassword": "securePasswor6",
+    "ExpectedErrorMessage": "Password is required."
+
   }
 ],"WrongEmail": [
     {
@@ -103,6 +112,13 @@
     "lastName": "Ahmed",
     "email": "Mona.Ahmed@example.com",
     "password": "securePassword456",
+    "confirmPassword": "securePasswor6"
+  },{
+    "gender": "Female",
+    "firstName": "Mona",
+    "lastName": "Ahmed",
+    "email": "Mona.Ahmed@example.com",
+    "password": "        ",
     "confirmPassword": "securePasswor6"
   }
   ]

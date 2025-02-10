@@ -17,12 +17,16 @@ public class JSONReader {
         try {
             JSONParser parser= new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(testDataPath + jsonFileName + ".json"));
+            System.out.println(jsonObject+"\n");
             JSONArray jsonArray = (JSONArray)  jsonObject.get(dataType);
             data = new Object[jsonArray.size()][1];
+            System.out.println(jsonArray);
             for (int i =0 ; i< jsonArray.size();i++){
                 HashMap<String,String> map = jsonObjectToHashMap((JSONObject)jsonArray.get(i));
                 data[i][0]= map;
+                System.out.println(data[i][0] +"\n");
             }
+
         } catch (IOException | ParseException e) {
             throw new RuntimeException(e);
         }
@@ -33,6 +37,9 @@ public class JSONReader {
         HashMap<String,String> x = new HashMap<>();
         jsonObject.forEach((key,value) -> x.put(key.toString(),value.toString()));
                 return x;
+    }
+    public static void main (String arg []){
+       readJsonFile("RegisterTestData","validRegisterData");
     }
 
 }
